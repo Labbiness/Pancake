@@ -14,9 +14,19 @@
 # limitations under the License.
 #
 
+import platform
+import os
 
-import Core.debug as debug
-import Installer.make as cake
 
-if __name__ == "__main__":
-    debug.Log("Now test")
+""":
+  Logger
+"""
+def log(string, withError = False): # -> Void
+    if withError:
+        print('\033[31m Pancake: ' + string + '\033[0m')
+    else:
+        print('\033[32m Pancake: \033[0m' + string)
+
+def notify(string): # -> Void
+    if platform.system() == 'Darwin':
+        os.system("osascript -e 'display notification \"" + "Pancake: " + string + "\"'")
