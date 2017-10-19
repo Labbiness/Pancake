@@ -15,8 +15,8 @@
 #
 
 
-import Core.debug as debug
+import Console
 import Installer.make as cake
 
 if __name__ == "__main__":
-    debug.Log("Now test")
+    Console.log("Now test")
