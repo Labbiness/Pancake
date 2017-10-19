@@ -13,20 +13,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-
-import platform
-import os
-
-
-
-## Function for debug console.
-def Log(string, withError = False, withNotify = False):
-    if withError:
-        print('\033[31mPancake Dev: ' + string + '\033[0m')
-    else:
-        print('\033[32mPancake Dev: \033[0m' + string)
-
-    if withNotify:
-        if platform.system() == 'Darwin':
-            os.system("osascript -e 'display notification \"" + "Panckae Dev: " + string + "\"'")
