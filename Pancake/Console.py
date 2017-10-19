@@ -15,6 +15,7 @@
 #
 
 import platform
+import subprocess
 import os
 
 
@@ -30,3 +31,12 @@ def log(string, withError = False): # -> Void
 def notify(string): # -> Void
     if platform.system() == 'Darwin':
         os.system("osascript -e 'display notification \"" + "Pancake: " + string + "\"'")
+
+
+
+""":
+ Shell excute
+"""
+def cmd(string, withLog = False):
+    cmds = string.split(" ")
+    subprocess.run(cmds)
