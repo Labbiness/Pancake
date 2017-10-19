@@ -18,10 +18,11 @@
 import platform
 import os
 
+import Console
 
 def getOS(inDetail = False): # -> String
     if inDetail:
-        pass
+        Console.log("inDetail platform is not implemented.", withError = True)
     else:
         return platform.system()
 
