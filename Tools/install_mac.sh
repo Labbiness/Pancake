@@ -20,3 +20,17 @@ else
     log "This installer is macOS only."
     exit 1
 fi
+
+# MOVE TO HOME DIRECTORY
+cd
+
+
+if [ -e ./pancake_installation ]; then
+    rm -rf ./pancake_installation
+fi
+mkdir ./pancake_installation
+cd ./pancake_installation
+
+
+## --------------------- Clone -------------------- ##
+git clone https://github.com/Labbiness/Pancake.git
