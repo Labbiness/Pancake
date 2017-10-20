@@ -15,6 +15,7 @@
 #
 
 import os
+import shutil
 
 
 def homeDirectory():
@@ -26,6 +27,11 @@ def currentDirectory():
 def exsitFile(file):
     return os.path.exists(file)
 
-
 def exists(file_path):
     return os.path.exists(file_path)
+
+def mkdir(path, override = False):
+    if override:
+        os.makedirs(path)
+    else:
+        os.makedirs(path)

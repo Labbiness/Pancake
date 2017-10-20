@@ -14,6 +14,23 @@
 # limitations under the License.
 #
 
+import Core.file as f
+import Console
+import subprocess
 
-def makeInstaller():
-    pass
+
+def install(git_url):
+
+    home_dir = f.homeDirectory()
+
+
+    # Make directory if not exist
+    if not (f.exists(home_dir + "./pancake_maples")):
+        f.mkdir(home_dir + "./pancake_maples")
+
+    # Clone maple package via Git url.
+    try:
+        res = subprocess.check_call(["git",  "clone", git_url])
+    except:
+        Console.log("Failed to clone " + git_url + "!" , withError = True)
+        exit(1)
