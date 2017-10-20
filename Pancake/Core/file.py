@@ -22,3 +22,10 @@ def homeDirectory():
 
 def currentDirectory():
     return os.getcwd()
+
+def exsitFile(file):
+    return os.path.exists(file)
+
+
+def exists(file_path):
+    return os.path.exists(file_path)
