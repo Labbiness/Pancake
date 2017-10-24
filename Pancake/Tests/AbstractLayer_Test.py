@@ -14,12 +14,17 @@
 # limitations under the License.
 #
 
+import unittest
 import functools
 
 
 
-def getOptions(): # -> Array<String>
-    pass
+## Python Block Test
+def sample(f, str):
+    f(str)
 
-def excute(): # -> Void
-    pass
+def closure(str):
+    print(str)
+
+
+sample(closure, "Hello, python closure")
