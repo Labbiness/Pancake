@@ -1,3 +1,4 @@
+# -*- encoding:utf-8 -*-
 #
 # Copyright (c) 2017 Shota Shimazu
 #
@@ -14,21 +15,30 @@
 # limitations under the License.
 #
 
-from setuptools import setup
-from setuptools import find_packages
+from setuptools import setup, find_packages
+import sys
 
+sys.path.append('./Pancake')
+sys.path.append('./tests')
 
-setup(name='Pancake',
-      version='0.0.1',
-      description='A integrated builder and tools for developers.',
-      author='Shota Shimazu',
-      author_email='hornet.live.mf@gmail.com',
-      url='https://github.com/Labbiness/Pancake',
-      download_url='https://github.com/Labbiness/Pancake/tarball/0.0.1',
-      license='Apache',
-      install_requires = [
-      ],
-      extras_require={
-          'tests': ['pytest',],
-      },
-      packages=find_packages())
+if __name__ == "__main__":
+    setup(
+        name = "Pancake",
+        version='0.0.1',
+        author = "Shota Shimazu",
+        author_email = "hornet.live.mf@gmail.com",
+        packages = find_packages(),
+        install_requires=[
+        ],
+        entry_points = {
+            'console_scripts':[
+                'pancake = Pancake.Pancake:main',
+            ],
+        },
+        description = "Abstract layer for any package manager.",
+        long_description = "Abstract layer for any package manager.",
+        url = "https://github.com/shotastage/Pancake.git",
+        license = "Apache",
+        platforms = ["POSIX", "Windows", "Mac OS X"],
+        test_suite = "djconsole_test.suite",
+    )
