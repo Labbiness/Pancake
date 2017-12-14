@@ -1,4 +1,4 @@
-![](./Documentation/readme.png)
+![](./docs/readme.png)
 
 
 Pancake is integrated build system or development tools for multiple package manager or platform.
