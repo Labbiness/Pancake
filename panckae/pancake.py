@@ -15,8 +15,8 @@
 #
 
 
-import Console
-import Installer.make as cake
+import console
+import install.make as cake
 import sys
 
 
