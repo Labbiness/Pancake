@@ -14,7 +14,7 @@ Copyright 2017 Shota Shimazu.
 """
 
 
-from djconsole.command import log
+from pancake.command import log
 
 
 class Flow():
@@ -72,7 +72,6 @@ class ArgumentSwitch():
     def _excute(self, func):
 
         if self._action_target == None and self.args == []:
-            log("これファよな", withError = True)
             func()
             return
     
