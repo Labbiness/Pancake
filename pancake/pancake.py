@@ -12,29 +12,10 @@ Copyright 2017 Shota Shimazu.
    limitations under the License.
 """
 
-import platform
-import subprocess
-import os
+from pancake.command import command, log
+from pan
+import sys
 
 
-""":
-  Logger
-"""
-def log(string, withError = False): # -> Void
-    if withError:
-        print('\033[31m Pancake: ' + string + '\033[0m')
-    else:
-        print('\033[32m Pancake: \033[0m' + string)
-
-def notify(string): # -> Void
-    if platform.system() == 'Darwin':
-        os.system("osascript -e 'display notification \"" + "Pancake: " + string + "\"'")
-
-
-
-""":
- Shell excute
-"""
-def cmd(string, withLog = False):
-    cmds = string.split(" ")
-    subprocess.run(cmds)
+def main():
+    args = sys.argv
