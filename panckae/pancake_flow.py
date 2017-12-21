@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 """
 Copyright 2017 Shota Shimazu.
@@ -12,7 +11,6 @@ Copyright 2017 Shota Shimazu.
    See the License for the specific language governing permissions and
    limitations under the License.
 """
-
 
 from pancake.command import log
 

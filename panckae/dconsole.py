@@ -12,10 +12,29 @@ Copyright 2017 Shota Shimazu.
    limitations under the License.
 """
 
-import console
-import install.make as cake
-import sys
+import platform
+import subprocess
+import os
 
 
-def main():
-    args = sys.argv
+""":
+  Logger
+"""
+def log(string, withError = False): # -> Void
+    if withError:
+        print('\033[31m Pancake: ' + string + '\033[0m')
+    else:
+        print('\033[32m Pancake: \033[0m' + string)
+
+def notify(string): # -> Void
+    if platform.system() == 'Darwin':
+        os.system("osascript -e 'display notification \"" + "Pancake: " + string + "\"'")
+
+
+
+""":
+ Shell excute
+"""
+def cmd(string, withLog = False):
+    cmds = string.split(" ")
+    subprocess.run(cmds)
