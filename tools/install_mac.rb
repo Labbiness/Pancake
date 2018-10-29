@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-# Copyright (c) 2017 Shota Shimazu
+# Copyright (c) 2017-2018 Shota Shimazu
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -83,4 +83,4 @@ end
 
 
 ## --------------------- Clone -------------------- ##
-#git clone https://github.com/Labbiness/Pancake.git
+#git clone https://github.com/shotastage/Pancake.git
