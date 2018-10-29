@@ -33,5 +33,5 @@ def install(git_url):
     try:
         res = subprocess.check_call(["git",  "clone", git_url])
     except:
-        Console.log("Failed to clone " + git_url + "!" , withError = True)
+        console.log("Failed to clone " + git_url + "!" , withError = True)
         exit(1)
