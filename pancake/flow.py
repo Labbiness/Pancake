@@ -12,43 +12,24 @@ Copyright (c) 2017-2018 Shota Shimazu.
    limitations under the License.
 """
 
-from pancake.command import log
+
 from abc import ABCMeta, abstractmethod
+from pancake.core import *
 
 
 class Workflow():
 
-    def __init__(self, parser):
-        self.inherited       = parser
-        self._action        = self.inherited[0]
-        self._subaction     = self.inherited[1]
-        self._option        = self.inherited[2]
-        self._option_detail = self.inherited[3]
-        self._values        = self.inherited[4]
-        self.constructor()
+    def __init__(self):
+        self.workflow_will_run()
+        self.workflow_running()
+        self.workflow_did_run()
 
 
-    def constructor(self): pass
+    def workflow_will_run(self) -> Void:
+        pass    
 
-    def get_first_arg(self):
-        try:
-            return self._values[0]
-        except:
-            raise ValueError
-
-    def register(self, flow):
-        self.Stepflows.append(flow)
-    
-    def main(self):
-        # Main flow structure
+    def workflow_running(self) -> Void:
         pass
 
-    def run(self):
-        self.main()
-
-        # Flow
-        for flow in self.Stepflows:
-            try:
-                flow.run()
-            except:
-                raise Exception
+    def workflow_did_run(self) -> Void:
+        pass
