@@ -109,3 +109,5 @@ venv.bak/
 
 # Swift
 #.build/#
+
+.vscode/settings.json

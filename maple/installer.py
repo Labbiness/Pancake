@@ -15,8 +15,8 @@
 #
 
 
-from Pancake.Core import file
-from Pancake import Console
+from pancake.core import file
+from pancake import console
 import subprocess
 
 
